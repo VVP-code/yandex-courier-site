@@ -28,9 +28,26 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = False
 
+# Разрешаем только твой домен
 ALLOWED_HOSTS = ['yandex-courier-site.onrender.com']
+
+# --- Статические файлы ---
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# --- Настройки безопасности для прокси Render ---
+USE_X_FORWARDED_HOST = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# --- Cookies и сессии ---
+SESSION_COOKIE_SECURE = True      # Только HTTPS
+CSRF_COOKIE_SECURE = True         # Только HTTPS
+
+# --- База данных (пример через env переменные) ---
+
 
 
 # Application definition
@@ -73,10 +90,10 @@ TEMPLATES = [
         },
     },
 ]
-STATIC_URL = 'static/'
+
 WSGI_APPLICATION = 'YandexCurrier.wsgi.application'
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
+
 MEDIA_ROOT = BASE_DIR / "mediafiles"
 
 # Database
