@@ -85,11 +85,11 @@ MEDIA_ROOT = BASE_DIR / "mediafiles"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('RENDER_DB_NAME', 'yandex_curier_db'),
-        'USER': os.getenv('RENDER_DB_USER', 'Vladimir'),
-        'PASSWORD': os.getenv('RENDER_DB_PASSWORD', 'POSTGRESS_PASSWORD'),
-        'HOST': os.getenv('RENDER_DB_HOST', 'localhost'),
-        'PORT': os.getenv('RENDER_DB_PORT', '5432'),
+        'NAME': os.getenv('RENDER_DB_NAME', ),
+        'USER': os.getenv('RENDER_DB_USER',),
+        'PASSWORD': os.getenv('RENDER_DB_PASSWORD',),
+        'HOST': os.getenv('RENDER_DB_HOST',),
+        'PORT': os.getenv('RENDER_DB_PORT',),
     }
 }
 
