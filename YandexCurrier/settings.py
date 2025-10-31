@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://yandex-courier-site.onrender.com']
+ALLOWED_HOSTS = ['yandex-courier-site.onrender.com']
 
 
 # Application definition
