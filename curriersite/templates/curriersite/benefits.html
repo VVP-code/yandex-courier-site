@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block mainpage %}{% endblock %}
+{% block extra-footer %}
+ footer { background-color:#FFC107; color:#000000; margin-top:auto; }{% endblock %}
+{% block benefits %}
+<section class="benefits py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Почему стоит выбрать Яндекс Еду</h2>
+      <p class="text-muted">Работай в удобное время, получай достойный доход и поддержку от компании.</p>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="benefit-icon"><i class="fa-solid fa-clock"></i></div>
+        <h5>Гибкий график</h5>
+        <p class="text-muted">Работай когда удобно — совмещай с учёбой, семьёй или другой занятостью.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="benefit-icon"><i class="fa-solid fa-wallet"></i></div>
+        <h5>Стабильный доход</h5>
+        <p class="text-muted">Ежедневные выплаты и бонусы за выполненные заказы.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="benefit-icon"><i class="fa-solid fa-map-marker-alt"></i></div>
+        <h5>Работа рядом с домом</h5>
+        <p class="text-muted">Выбирай районы доставки и сокращай время на дорогу.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block content %}
+<a href="/apply/" class="btn btn-main btn-lg mt-3">Подать заявку</a>
+<section id="reviews">
+  <style>
+    /* Общие стили для секции отзывов */
+    #reviews {
+        background-color: #f8f9fa;
+        padding: 60px 0;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        color: #333;
+    }
+
+    #reviews h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 40px;
+        text-align: center;
+        color: #222;
+    }
+
+    /* Сетка карточек */
+    #reviews .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Карточка */
+    #reviews .card {
+        border: none;
+        border-radius: 15px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        overflow: hidden;
+        background: #fff;
+        margin: 15px;
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+
+    #reviews .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    /* Тело карточки */
+    #reviews .card-body {
+        padding: 30px 25px;
+    }
+
+    /* Контейнер для аватарки и текста */
+    .review-content {
+        display: flex;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    /* Аватарка */
+    .review-avatar {
+        flex-shrink: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #ddd;
+        object-fit: cover;
+    }
+
+    /* Цитата */
+    #reviews blockquote {
+        font-style: italic;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        position: relative;
+        padding-left: 25px;
+        color: #555;
+        margin: 0;
+    }
+
+    #reviews blockquote::before {
+        content: "“";
+        font-size: 2.5rem;
+        color: #ffc107;
+        position: absolute;
+        left: 0;
+        top: -10px;
+    }
+
+    #reviews blockquote p {
+        margin-bottom: 10px;
+    }
+
+    /* Футер цитаты */
+    #reviews blockquote-footer {
+        font-size: 0.85rem;
+        color: #FFC107; /* мягкий серый цвет */
+        margin-top: 8px;
+    }
+
+    #reviews blockquote-footer cite {
+        font-style: normal;
+        color: #000000;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 991px) {
+        #reviews .card {
+            flex: 0 0 45%;
+            max-width: 45%;
+        }
+    }
+
+    @media (max-width: 575px) {
+        #reviews .card {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .review-content {
+            flex-direction: column;
+            align-items: center;
+        }
+        .review-avatar {
+            margin-bottom: 15px;
+        }
+    }
+  </style>
+
+  <div class="container">
+    <h2>Отзывы курьеров</h2>
+    <div class="row">
+
+      <div class="card">
+        <div class="card-body">
+          <div class="review-content">
+            <img src="{% static 'images/avatar2.jpg' %}" alt="Ростислав" class="review-avatar">
+            <blockquote class="blockquote">
+              <p>Физическая нагрузка присутствует, но за счет нормального темпа можно все успевать. Иногда за день получается сделать всего 5–6 заказов, но сумма за них приличная, от объема зависит. Оплата приходит регулярно, приложение считает все автоматически. Есть помощь техподдержки, но не всегда сразу отвечают, особенно ближе к вечеру, у них видимо тоже нагрузка растет. За пару месяцев понял, что это хороший вариант для тех, кто не боится поработать руками и хочет видеть результат сразу.</p>
+              <footer class="blockquote-footer">Ростислав, <cite title="https://otzovik.com/">Отзовик</cite></footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <div class="review-content">
+            <img src="{% static 'images/avatar3.jpg' %}" alt="Мария" class="review-avatar">
+            <blockquote class="blockquote">
+              <p>Работать начал с центра, там плотность заказов выше. Утром беру смену, заканчиваю часов в 6-8, обычно по настроению и заказам. Иногда выхожу и на вечер, если хочу подзаработать. Доход получается стабильный, особенно если выполнять цели по заказам, сервис начисляет хорошие бонусы.</p>
+              <footer class="blockquote-footer">Мария, <cite title="https://otzovik.com/">Отзовик</cite></footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <div class="review-content">
+            <img src="{% static 'images/avatar1.jpg' %}" alt="Валерия" class="review-avatar">
+            <blockquote class="blockquote">
+              <p>Заказов хватает, особенно в будни. Можно спокойно совмещать с домашними делами. Не ожидала, что так втянусь, но уже три месяца на линии и пока не хочу прекращать. Занятость прозрачная в плане оплаты, мне нравится, что деньги всегда можно вывести сразу, ощущаю, что реально не сижу без дела. Думаю, что в Я. доставке задержусь надолго, быть самозанятым партнером оказалось максимально комфортно.</p>
+              <footer class="blockquote-footer">Валерия, <cite title="https://otzovik.com/">Отзовик</cite></footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}FAQ — Работа курьером в Яндекс Еде{% endblock %}
+
+{% block mainpage %}
+<section class="py-5" style="background-color:#f8f9fa;">
+  <div class="container">
+    <h1 class="mb-5 text-center" style="color:#000;">Часто задаваемые вопросы</h1>
+
+    <div class="accordion" id="faqAccordion">
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading1">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1">
+            С какого возраста можно стать курьером-партнёром?
+          </button>
+        </h2>
+        <div id="faqCollapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Обычно требуется быть не моложе 18 лет и иметь необходимые документы и транспорт (в зависимости от города).
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2">
+            Какой график работы?
+          </button>
+        </h2>
+        <div id="faqCollapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            График свободный: вы сами выбираете когда выходить на смену — утром, вечером или в выходные.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3">
+            Какие документы нужны?
+          </button>
+        </h2>
+        <div id="faqCollapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Обычно: паспорт, регистрация как самозанятого или иной статус, мобильный телефон, транспорт (по желанию). Уточняйте по вашему городу.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4">
+            Можно ли совмещать с учёбой или основной работой?
+          </button>
+        </h2>
+        <div id="faqCollapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Да — свободный график позволяет совмещать с учёбой или другой занятостью.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading5">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5">
+            Выбираю район доставки — можно ли выбрать самому?
+          </button>
+        </h2>
+        <div id="faqCollapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Да — вы можете выбирать районы, в которых удобно работать, что помогает сократить время на дорогу.
+          </div>
+        </div>
+      </div>
+
+    </div>
+<P></P>
+    <div class="text-center mt-5">
+      <a href="https://reg.eda.yandex.ru/?advertisement_campaign=forms_for_agents&user_invite_code=153ac52c7d02418cb770fef2646ecdf5&utm_content=blank" class="btn btn-main btn-lg">Стать курьером</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block benefits %}{% endblock %}

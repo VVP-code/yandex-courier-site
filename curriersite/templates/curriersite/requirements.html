@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Условия работы курьером — Яндекс Еда{% endblock %}
+{% block benefits %}{% endblock %}
+{% block mainpage %}
+<section class="py-5" style="background-color:#f8f9fa;">
+  <div class="container">
+    <h1 class="mb-5 text-center" style="color:#000;">Условия работы курьером в Яндекс Еде</h1>
+
+    <p>Яндекс Еда — это сервис быстрой доставки еды и продуктов. Наши курьеры ежедневно развозят десятки тысяч заказов. Подключаясь к нам, вы начинаете зарабатывать с первого дня и сами управляете своим графиком.</p>
+
+    <h3 class="mt-5 mb-3">Почему работать с нами удобно?</h3>
+    <div class="accordion" id="benefitsAccordion">
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingIndependent">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndependent">
+            Работа самостоятельно
+          </button>
+        </h2>
+        <div id="collapseIndependent" class="accordion-collapse collapse" data-bs-parent="#benefitsAccordion">
+          <div class="accordion-body">
+            Вы не работаете на «дядю» — сами выбираете когда выходить на смену и сколько зарабатывать. Ваш доход зависит только от вашей активности и количества выполненных заказов.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTeam">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTeam">
+            Команда поддержки
+          </button>
+        </h2>
+        <div id="collapseTeam" class="accordion-collapse collapse" data-bs-parent="#benefitsAccordion">
+          <div class="accordion-body">
+            Наши менеджеры и техподдержка всегда готовы помочь: ответят на вопросы, подскажут как оптимизировать маршруты и решить любые организационные вопросы.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSchedule">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSchedule">
+            Гибкий график
+          </button>
+        </h2>
+        <div id="collapseSchedule" class="accordion-collapse collapse" data-bs-parent="#benefitsAccordion">
+          <div class="accordion-body">
+            Работайте когда удобно: утром, вечером или в выходные. Совмещайте с учёбой, основной работой или домашними делами.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingIncome">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIncome">
+            Стабильный доход
+          </button>
+        </h2>
+        <div id="collapseIncome" class="accordion-collapse collapse" data-bs-parent="#benefitsAccordion">
+          <div class="accordion-body">
+            Выплаты ежедневные, начисления прозрачные, бонусы за выполненные заказы. Вы всегда знаете, сколько заработали.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingLocation">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLocation">
+            Работа рядом с домом
+          </button>
+        </h2>
+        <div id="collapseLocation" class="accordion-collapse collapse" data-bs-parent="#benefitsAccordion">
+          <div class="accordion-body">
+            Выбирайте районы доставки и экономьте время на дорогу. Удобно планировать смены в вашем районе.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h3 class="mt-5 mb-3">Как начать работать курьером?</h3>
+    <ol>
+      <li>Оформите регистрацию как самозанятый.</li>
+      <li>Скачайте приложение курьера и пройдите инструктаж.</li>
+      <li>Начинайте принимать заказы и зарабатывать.</li>
+    </ol>
+
+    <div class="text-center mt-5">
+      <a href="https://reg.eda.yandex.ru/?advertisement_campaign=forms_for_agents&user_invite_code=153ac52c7d02418cb770fef2646ecdf5&utm_content=blank" class="btn btn-main btn-lg">Стать курьером</a>
+    </div>
+
+  </div>
+</section>
+{% endblock %}
