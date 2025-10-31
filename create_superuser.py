@@ -16,9 +16,9 @@ SUPERUSER_PASSWORD = os.environ.get("DJANGO_SUPERUSER_PASSWORD",)
 if not User.objects.filter(username=SUPERUSER_USERNAME).exists():
     print(f"Создаем суперпользователя {SUPERUSER_USERNAME}...")
     User.objects.create_superuser(
-        username=SUPERUSER_USERNAME,
-        email=SUPERUSER_EMAIL,
-        password=SUPERUSER_PASSWORD
+        username=('SUPERUSER_USERNAME',),
+        email=os.environ.get('SUPERUSER_EMAIL',),
+        password=os.environ.get('SUPERUSER_PASSWORD',)
     )
     print("Суперпользователь создан!")
 else:
